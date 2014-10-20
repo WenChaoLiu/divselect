@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>div模拟下拉菜单特效</title>
+<style type="text/css">
+body,ul,li{ margin:0; padding:0; font-size:13px;}
+ul,li{list-style:none;}
+
+.divselect{width:156px;position:relative}
+.divselect cite{width:120px; height:24px;line-height:24px; display:block; color:#807a62; cursor:pointer;font-style:normal;
+padding-left:4px; padding-right:30px; border:1px solid #CCC; 
+background:url(xjt.png) no-repeat right center;}
+.divselect ul{position:absolute; width:156px; top:25px;border-bottom:1px solid #CCC; display:none;}
+.divselect ul li{border:1px solid #CCC; border-bottom:1px solid #EEE; border-top:none; height:24px; line-height:24px; background:#FFF; cursor:pointer;list-style:none}
+.divselect ul li a{display:block; height:24px; color:#333333; text-decoration:none; padding-left:10px; padding-right:10px;}
+.divselect ul li a:hover{background-color:#F5F5F5;}
+.divselect ul.dis{display:block!important;}  
+.divselect ul.undis{display:noneimportant;}  
+.divselect ul.dis{display:block!important;}  
+.divselect ul.undis{display:noneimportant;}  
+
+.divselectzq{width:156px;position:relative;}
+.divselectzq cite{width:120px; height:24px;line-height:24px; display:block; color:#807a62; cursor:pointer;font-style:normal;
+padding-left:4px; padding-right:30px; border:1px solid #CCC; 
+background:url(xjt.png) no-repeat right center;}
+.divselectzq ul{position:absolute; width:156px; top:25px;border-bottom:1px solid #CCC; display:none;}
+.divselectzq ul li{border:1px solid #CCC; border-bottom:1px solid #EEE; border-top:none; height:24px; line-height:24px; background:#FFF; cursor:pointer;list-style:none}
+.divselectzq ul li a{display:block; height:24px; color:#333333; text-decoration:none; padding-left:10px; padding-right:10px;}
+.divselectzq ul li a:hover{background-color:#F5F5F5;}
+.divselectzq ul.dis{display:block!important;}  
+.divselectzq ul.undis{display:noneimportant;}  
+.divselectzq ul.dis{display:block!important;}  
+.divselectzq ul.undis{display:noneimportant;}  
+
+.zIndex{z-index:10000!important}  
+.inputLine{
+	border:none;
+	border-bottom-style:solid;
+	border-bottom-color:#000;
+	border-bottom-width:thin;
+	width:40px;
+}
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="divselect.js"></script>
+<script type="text/javascript">
+$(function(){
+	$.divselect("#divselect","#personType");
+});
+</script>
+</head>
+<body>
+<form action="" method="post">
+	<table style="border:#F00 thin">
+    	<tr style="border:#F00 thin">
+        	<td style="border:#F00 thin">
+            	<div id="divselect" class="divselect">
+                  <cite>==请选择==</cite>
+                  <ul>
+                     <li><a href="javascript:;" selectid="1">儿童</a></li>
+                     <li><a href="javascript:;" selectid="2">成人</a></li>
+                     <li><a href="javascript:;" selectid="3">老年</a></li>
+                     <li><a href="javascript:;" selectid="4">孕产妇</a></li>
+                     <li><a href="javascript:;" selectid="5">哺乳期妇女</a></li>
+                     <li><a href="javascript:;" selectid="6">绝经期妇女</a></li>
+                     <li><a href="javascript:;" selectid="7">婴儿</a></li>
+                     <li><a href="javascript:;" selectid="8">幼儿</a></li>
+                     <li><a href="javascript:;" selectid="9">小儿</a></li>
+                     <li><a href="javascript:;" selectid="10">新生儿</a></li>
+                     <li>
+                        <a href="javascript:;" selectid="11">
+                            <input type="text" class="inputLine" name="startTime"/><span>岁以上</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:;" selectid="12">
+                            <input type="text" class="inputLine" name="endTime"/><span>岁以下</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:;" selectid="13">
+                            <input type="text" class="inputLine" name="startTime"/><span>岁到</span>
+                            <input type="text" class="inputLine" name="endTime"/><span>岁</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:;" selectid="14">
+                            <input type="text" class="inputLine" name="startTime"/><span>月到</span>
+                            <input type="text" class="inputLine" name="endTime"/><span>岁</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:;" selectid="15">
+                            <input type="text" class="inputLine" name="startTime"/><span>月以上</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:;" selectid="16">
+                            <input type="text" class="inputLine" name="endTime"/><span>月一下</span>
+                        </a>
+                     </li>
+                      <li>
+                        <a href="javascript:;" selectid="17">
+                            <input type="text" class="inputLine" name="startTime"/><span>月到</span>
+                            <input type="text" class="inputLine" name="endTime"/><span>月</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:;" selectid="18">
+                            <input type="text" class="inputLine" name="endTime"/><span>天</span>
+                        </a>
+                     </li>
+                      <li>
+                        <a href="javascript:;" selectid="19">
+                            <input type="text" class="inputLine" name="endTime"/><span>天以上</span>
+                        </a>
+                     </li>
+                  </ul>
+                 <input name="personType" type="text" value="" id="personType"/>
+                 <input name="startAge" type="text" value="" id="startAge"/>
+                 <input name="endAge" type="text" value="" id="endAge"/>
+                 </div>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
